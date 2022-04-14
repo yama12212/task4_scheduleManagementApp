@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      schedule: スケジュール
+    attributes:
+      schedule:  
+       id: ID
+       title: タイトル
+       description: スケジュールメモ
+       start_day: 開始日
+       end_day: 終了日
+       all_day_long: 終日
+       created_at: スケジュール登録日時
+       updated_at: スケジュール更新日時
+  time:
+    current: "%Y年%m月%d日"
+

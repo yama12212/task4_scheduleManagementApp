@@ -1,0 +1,55 @@
+<main>
+  <div class="container_index">
+    <h3 class="title_text">
+      スケジュール一覧
+    </h3>
+
+    <div class="index_table">
+      <table>
+        <thead>
+          <tr class="index_table_head">
+            <th><%= t("activerecord.attributes.schedule.id") %></th>
+            <th><%= t("activerecord.attributes.schedule.title") %></th>
+            <th><%= t("activerecord.attributes.schedule.description") %></th>
+            <th><%= t("activerecord.attributes.schedule.start_day") %></th>
+            <th><%= t("activerecord.attributes.schedule.end_day") %></th>
+            <th><%= t("activerecord.attributes.schedule.all_day_long") %></th>
+            <th><%= t("activerecord.attributes.schedule.updated_at") %></th>
+            <th>確認</th>
+            <th>編集</th>
+            <th>削除</th>
+          </tr>
+        </thead>
+        <tmain>
+          <% @sches.each do |sche| %>
+            <tr class="index_table_row">
+              <td><%= sche.id%></td>
+              <td><%= sche.title%></td>
+              <td><%= sche.description%></td>
+              <td><%= sche.start_day.to_s(:custom_day)%></td>
+              <td><%= sche.end_day.to_s(:custom_day)%></td>
+              <td><%= sche.all_day_long ? "○" : "" %></td>
+              <td><%= sche.updated_at.to_s(:custom_datetime)%></td>
+              <td>
+                <%= link_to("確認", schedule_path(sche.id))%>
+              </td>
+              <td>
+                <%= link_to("編集", edit_schedule_path(sche.id))%>
+              </td>
+              <td>
+                <%= link_to("削除", schedule_path(sche.id), method: :delete, data: { confirm: "本当に削除しますか？" })%>
+              </td>
+            </tr>
+          <% end %>
+        </tmain>
+      </table>
+    </div>
+    <div class="transition_path">
+      <%= link_to("スケジュール新規登録", new_schedule_path)%>
+    </div>
+  </div>
+</main>
+
+<%= render("shared/footer_index") %>
+
+

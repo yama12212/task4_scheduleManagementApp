@@ -1,0 +1,38 @@
+<main>
+  <div class="container_common">
+    <h3 class="title_text">
+      スケジュール詳細
+    </h3>
+
+    <table class="description_table">
+      <tr>
+        <th><%= t("activerecord.attributes.schedule.title") %></th>
+        <td><%= @sches.title %></td>
+      </tr>
+      <tr>
+        <th><%= t("activerecord.attributes.schedule.start_day") %></th>
+        <td><%= @sches.start_day.to_s(:custom_day) %></td>
+      </tr>
+      <tr>
+        <th><%= t("activerecord.attributes.schedule.end_day") %></th>
+        <td><%= @sches.end_day.to_s(:custom_day) %></td>
+      </tr>
+      <tr>
+        <th><%= t("activerecord.attributes.schedule.all_day_long") %></th>
+        <td><%= @sches.all_day_long ? "○" : "" %></td>
+      </tr>
+      <tr>
+        <th><%= t("activerecord.attributes.schedule.description") %></th>
+        <td><%= @sches.description %></td>
+      </tr>
+    </table>
+  
+    <div class="transition_path">
+      <%= link_to("スケジュール一覧に戻る", schedules_path)%>
+      <%= link_to("スケジュールを編集する", edit_schedule_path)%>
+      <%= link_to("スケジュールを削除する", schedule_path, method: :delete, data: {confirm: "本当に削除しますか？"}) %>
+    </div>
+  </div>
+</main>
+
+<%= render("shared/footer_common")%>

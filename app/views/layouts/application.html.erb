@@ -11,6 +11,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <h1>Ruby on Rails &nbsp;&nbsp;Schedule Management App<h1>
+      </header>
+        <% if flash[:notice] %>
+          <p class="notice"><%= flash[:notice] %></p>
+        <% elsif flash[:failed] %>
+          <p class="failed"><%= flash[:failed] %></p>
+        <% end %>
+        <%= yield %>
+    </div>
   </body>
 </html>
