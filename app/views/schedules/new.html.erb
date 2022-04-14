@@ -1,0 +1,13 @@
+<main>
+  <div class="container_common">
+    <h3 class="title_text">
+      スケジュール新規作成
+    </h3>
+
+    <%= render("shared/validates_error", obj: @sches)%>
+
+    <%= render("shared/form", submit_text: "スケジュールを新規登録する")%>
+  </div>
+</main>
+
+<%= render("shared/footer_common")%>

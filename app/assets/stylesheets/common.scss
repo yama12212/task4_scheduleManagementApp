@@ -1,0 +1,218 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
+}
+
+a{
+  color:blue;
+  border-bottom: 1px solid blue;
+  text-decoration: none;
+}
+
+ul,li{
+  list-style-type: none;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+header{
+  width: 100%;
+  padding-left: 10px;
+  font-family: "Impact";
+  color: #fff;
+  background-color: #c52f24;
+  height: 100px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 100px;
+}
+
+main{
+  flex-grow: 1;
+}
+
+
+//messagesレイアウト
+.notice{
+  text-align: center;
+  color: #fff;
+  background-color: rgba(33, 187, 33, 0.8);
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+}
+
+.failed{
+  text-align: center;
+  color: #fff;
+  background-color: rgba(255, 0, 0, 0.8);
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+}
+
+.validate_error_messages{
+  margin: 0 0 10px 30px;
+  line-height: 2em;
+}
+
+//headerレイアウト
+.container_index{
+  margin: 0 10px;
+}
+
+.container_common{
+  margin: 0 10px;
+
+}
+
+.title_text{
+  margin: 25px 0 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+//indexビューレイアウト
+.index_table>table{
+  border: 0.1px solid #000;
+}
+
+.index_table_head>th{
+  background-color: cyan;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border: 0.1px solid #000;
+}
+
+.index_table_row>td{
+  box-sizing: border-box;
+  background-color: #eee;
+  padding: 10px 15px;
+  text-align: center;
+  border: 0.1px solid #000;
+}
+
+.index_table_row:nth-child(odd)>td{
+  background-color: #fff;
+}
+
+//showビューレイアウト
+.description_table>tbody>tr>th{
+  background-color: cyan;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border: 0.1px solid #000;
+}
+
+.description_table>tbody>tr>td{
+  background-color: #eee;
+  padding: 10px 15px;
+  text-align: center;
+  border: 0.1px solid #000;
+}
+
+.transition_path{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.transition_path>a{
+  margin: 5px 0 15px 30px;
+}
+
+
+//_formパーシャルレイアウト
+.input_form>tbody>tr>th{
+  background-color: cyan;
+  font-weight: bold!important;
+  padding: 10px;
+  text-align: center;
+  border: 0.1px solid #000;
+}
+
+.input_form>tbody>tr>td{
+  background-color: #eee;
+  padding: 10px 15px;
+  text-align: center;
+  border: 0.1px solid #000;
+}
+
+.input_form>tbody>tr>td>input{
+  width: 100%;
+  height: 25px;
+  font-size: 16px;
+}
+
+.input_form>tbody>tr>td>div>input{
+  width: 100%;
+  height: 25px;
+  font-size: 16px;
+}
+
+.input_form>tbody>tr:nth-of-type(4)>td>input{
+  height: 15px; //チェックボックスの大きさ
+}
+
+.input_form>tbody>tr>td>textarea{
+  width: 100%;
+  height: 100px;
+  font-size: 14px;
+}
+
+.transition_path_form{
+  margin-left: 30px;
+}
+
+.transition_path_form>ul>li>input{
+  margin-top: 20px;
+  font-size: 14px;
+  padding: 5px;
+  height: 35px;
+}
+
+.transition_path_form>ul>li>a{
+  display: inline-block;
+  margin: 10px 0 20px 0;
+}
+
+//footerレイアウト
+.transition_path{
+  margin-top: 10px;
+}
+
+.footer_index{
+  width: 100%;
+  padding-left: 10px;
+  font-family: "Impact";
+  color: #fff;
+  background-color: #c52f24;
+  height: 100px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 100px;
+}
+
+.footer_common{
+  width: 100%;
+  padding-left: 10px;
+  font-family: "Impact";
+  color: #fff;
+  background-color: #c52f24;
+  height: 100px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 100px;
+}
